@@ -1,0 +1,160 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    padding: 5px;
+    margin-top: 25px;
+}
+.header h2{
+   color: black;
+   text-align: center;
+   font-size: 35px;
+   font-weight: bold;
+   transition: 0.3s;  
+}
+.stats-container{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    padding: 5px;
+    width: 280px;
+    height: 400px;
+    align-items: center;
+    background-color: azure;
+    justify-content: center;
+    border-radius: 5px;
+    color: grey;
+    box-shadow: 0px 0px 7px 3px;
+    
+}
+.stats-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+}
+.game-container{
+    display: flex; 
+    margin-top: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    
+}
+.card:active{
+    transform: scale(.50);
+    transition: transform .6s;
+}
+#front-view{
+    position: absolute;
+    font-size: 35px;
+    color: black;
+    top:20%;
+    left: 35%;
+    opacity: 1;
+}
+.card{
+    /* transform: scale(1); */
+    position: relative;
+    background-color: cadetblue;
+    margin: 2px;
+}
+.card:hover{
+  background-color: rgb(43, 141, 144);
+  cursor: pointer;
+}
+.card img{
+    margin: 10px;
+    max-width: 45px;
+    opacity: 0;
+}
+.controls-container p{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.card.clicked img,
+.card.checked img {
+  opacity: 1;
+  
+}
+.card.checked{
+background-color: rgb(56, 164, 56);
+}
+.card.clicked #front-view,
+.card.checked #front-view{
+    opacity: 0;
+}
+.card.shake {
+    background-color: #f15f5f;
+    animation: shake .5s;
+}
+@keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+  #new{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    width: 100%;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(124, 137, 201);
+  }
+  #new:hover{
+    color:white;
+    background-color: rgb(80, 94, 165);
+  }
